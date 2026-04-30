@@ -4,7 +4,7 @@
 
 ```bash
 sudo apt update
-sudo apt install -y redis-server docker.io python3-venv python3-pip ansible git curl jq
+sudo apt install -y redis-server docker.io python3-venv python3-pip ansible git curl jq neofetch fish
 ```
 ---
 ## Доп настройки (Что бы Docker работал без `sudo`)
