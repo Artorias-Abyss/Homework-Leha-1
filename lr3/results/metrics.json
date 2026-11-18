@@ -1,0 +1,283 @@
+{
+  "started_utc": "2026-11-18T11:19:56.199157+00:00",
+  "finished_utc": "2026-11-18T11:26:15.804088+00:00",
+  "elapsed_seconds": 379.604816209001,
+  "python": "3.12.14",
+  "tensorflow": "2.21.0",
+  "devices": [
+    "CPU"
+  ],
+  "seed": 42,
+  "epoch_multiplier": 3,
+  "epoch_limits": {
+    "cnn": 30,
+    "mobile": 21,
+    "autoencoder": 18,
+    "head": 54,
+    "ae_finetune": 30,
+    "cnn_plain": 15,
+    "mobile_finetune": 12
+  },
+  "audit": {
+    "файлов в одном дереве архива": 2527,
+    "повреждённых файлов": 0,
+    "копий с одинаковой меткой удалено": 0,
+    "файлов с противоречивой меткой удалено": 6,
+    "изображений после очистки": 2521
+  },
+  "splits": {
+    "train": 1764,
+    "validation": 378,
+    "test": 379
+  },
+  "class_counts": {
+    "cardboard": 403,
+    "glass": 498,
+    "metal": 409,
+    "paper": 594,
+    "plastic": 480,
+    "trash": 137
+  },
+  "validation": {
+    "CNN": {
+      "accuracy": 0.5661375661375662,
+      "balanced_accuracy": 0.4877855037760177,
+      "macro_precision": 0.4784624713756718,
+      "macro_recall": 0.4877855037760177,
+      "macro_f1": 0.4751426227327318,
+      "cross_entropy": 1.153356671333313,
+      "F1: cardboard": 0.6902654867256637,
+      "F1: glass": 0.5232558139534884,
+      "F1: metal": 0.448,
+      "F1: paper": 0.7317073170731707,
+      "F1: plastic": 0.4576271186440678,
+      "F1: trash": 0.0
+    },
+    "MobileNetV2 frozen": {
+      "accuracy": 0.8121693121693122,
+      "balanced_accuracy": 0.7907249184031281,
+      "macro_precision": 0.7955010539569364,
+      "macro_recall": 0.7907249184031281,
+      "macro_f1": 0.7900661308234707,
+      "cross_entropy": 0.5751276612281799,
+      "F1: cardboard": 0.875,
+      "F1: glass": 0.8129032258064516,
+      "F1: metal": 0.8387096774193549,
+      "F1: paper": 0.8198757763975155,
+      "F1: plastic": 0.7785234899328859,
+      "F1: trash": 0.6153846153846154
+    },
+    "AE frozen": {
+      "accuracy": 0.47883597883597884,
+      "balanced_accuracy": 0.40648465374565945,
+      "macro_precision": 0.41764298311917364,
+      "macro_recall": 0.40648465374565945,
+      "macro_f1": 0.3994538804954446,
+      "cross_entropy": 1.3430675268173218,
+      "F1: cardboard": 0.5686274509803921,
+      "F1: glass": 0.2692307692307692,
+      "F1: metal": 0.4,
+      "F1: paper": 0.6276150627615062,
+      "F1: plastic": 0.53125,
+      "F1: trash": 0.0
+    },
+    "AE classifier": {
+      "accuracy": 0.5105820105820106,
+      "balanced_accuracy": 0.43181397228873747,
+      "macro_precision": 0.4519810508182602,
+      "macro_recall": 0.43181397228873747,
+      "macro_f1": 0.4232674920555139,
+      "cross_entropy": 1.2968854904174805,
+      "F1: cardboard": 0.6407766990291263,
+      "F1: glass": 0.32679738562091504,
+      "F1: metal": 0.4,
+      "F1: paper": 0.6482213438735178,
+      "F1: plastic": 0.5238095238095238,
+      "F1: trash": 0.0
+    },
+    "CNN no regularization": {
+      "accuracy": 0.5502645502645502,
+      "balanced_accuracy": 0.47627809841523233,
+      "macro_precision": 0.47775202108157816,
+      "macro_recall": 0.47627809841523233,
+      "macro_f1": 0.4687913203871423,
+      "cross_entropy": 1.2257704734802246,
+      "F1: cardboard": 0.6902654867256637,
+      "F1: glass": 0.5,
+      "F1: metal": 0.4,
+      "F1: paper": 0.7142857142857143,
+      "F1: plastic": 0.5081967213114754,
+      "F1: trash": 0.0
+    },
+    "MobileNetV2 fine-tuned": {
+      "accuracy": 0.8386243386243386,
+      "balanced_accuracy": 0.8204171186290362,
+      "macro_precision": 0.8350122854999346,
+      "macro_recall": 0.8204171186290362,
+      "macro_f1": 0.8256772635175538,
+      "cross_entropy": 0.5649140477180481,
+      "F1: cardboard": 0.873015873015873,
+      "F1: glass": 0.8413793103448276,
+      "F1: metal": 0.8253968253968254,
+      "F1: paper": 0.8636363636363636,
+      "F1: plastic": 0.8137931034482758,
+      "F1: trash": 0.7368421052631579
+    },
+    "AE32 frozen": {
+      "accuracy": 0.5343915343915344,
+      "balanced_accuracy": 0.4565069789811915,
+      "macro_precision": 0.4539875942547699,
+      "macro_recall": 0.4565069789811915,
+      "macro_f1": 0.44710487143143657,
+      "cross_entropy": 1.2329357862472534,
+      "F1: cardboard": 0.6296296296296297,
+      "F1: glass": 0.42168674698795183,
+      "F1: metal": 0.4247787610619469,
+      "F1: paper": 0.6909090909090909,
+      "F1: plastic": 0.515625,
+      "F1: trash": 0.0
+    },
+    "AE32 classifier": {
+      "accuracy": 0.544973544973545,
+      "balanced_accuracy": 0.4675062080868859,
+      "macro_precision": 0.47336492684895776,
+      "macro_recall": 0.4675062080868859,
+      "macro_f1": 0.4593361537762699,
+      "cross_entropy": 1.1990352869033813,
+      "F1: cardboard": 0.6605504587155964,
+      "F1: glass": 0.43956043956043955,
+      "F1: metal": 0.4642857142857143,
+      "F1: paper": 0.704225352112676,
+      "F1: plastic": 0.48739495798319327,
+      "F1: trash": 0.0
+    }
+  },
+  "test": {
+    "CNN": {
+      "accuracy": 0.5936675461741425,
+      "balanced_accuracy": 0.5168517129739271,
+      "macro_precision": 0.6799903949199244,
+      "macro_recall": 0.5168517129739271,
+      "macro_f1": 0.5154838110585601,
+      "cross_entropy": 1.0253907442092896,
+      "F1: cardboard": 0.7787610619469026,
+      "F1: glass": 0.46835443037974683,
+      "F1: metal": 0.47368421052631576,
+      "F1: paper": 0.7074235807860262,
+      "F1: plastic": 0.5737704918032787,
+      "F1: trash": 0.09090909090909091
+    },
+    "MobileNetV2 frozen": {
+      "accuracy": 0.8047493403693932,
+      "balanced_accuracy": 0.7624932071639569,
+      "macro_precision": 0.7965477955195547,
+      "macro_recall": 0.7624932071639569,
+      "macro_f1": 0.7708495778506661,
+      "cross_entropy": 0.5612715482711792,
+      "F1: cardboard": 0.8617886178861789,
+      "F1: glass": 0.8079470198675497,
+      "F1: metal": 0.7851851851851852,
+      "F1: paper": 0.8554913294797688,
+      "F1: plastic": 0.7692307692307693,
+      "F1: trash": 0.5454545454545454
+    },
+    "AE classifier": {
+      "accuracy": 0.5356200527704486,
+      "balanced_accuracy": 0.4601469304080282,
+      "macro_precision": 0.4826081154273525,
+      "macro_recall": 0.4601469304080282,
+      "macro_f1": 0.45328152158681084,
+      "cross_entropy": 1.2163407802581787,
+      "F1: cardboard": 0.7387387387387387,
+      "F1: glass": 0.30985915492957744,
+      "F1: metal": 0.44680851063829785,
+      "F1: paper": 0.6055776892430279,
+      "F1: plastic": 0.6187050359712231,
+      "F1: trash": 0.0
+    }
+  },
+  "training": [
+    {
+      "stage": "cnn",
+      "limit": 30,
+      "completed": 30,
+      "best_epoch": 28,
+      "best_val_loss": 1.1753543615341187,
+      "seconds": 87.94
+    },
+    {
+      "stage": "mobile",
+      "limit": 21,
+      "completed": 15,
+      "best_epoch": 9,
+      "best_val_loss": 0.6019814014434814,
+      "seconds": 24.05
+    },
+    {
+      "stage": "autoencoder64",
+      "limit": 18,
+      "completed": 18,
+      "best_epoch": 18,
+      "best_val_loss": 0.001582849770784378,
+      "seconds": 83.34
+    },
+    {
+      "stage": "ae64_head",
+      "limit": 54,
+      "completed": 53,
+      "best_epoch": 47,
+      "best_val_loss": 1.3555521965026855,
+      "seconds": 5.36
+    },
+    {
+      "stage": "ae64_classifier",
+      "limit": 30,
+      "completed": 23,
+      "best_epoch": 17,
+      "best_val_loss": 1.3028051853179932,
+      "seconds": 18.29
+    },
+    {
+      "stage": "cnn_plain",
+      "limit": 15,
+      "completed": 15,
+      "best_epoch": 14,
+      "best_val_loss": 1.2257704734802246,
+      "seconds": 30.25
+    },
+    {
+      "stage": "mobile_finetune",
+      "limit": 12,
+      "completed": 11,
+      "best_epoch": 5,
+      "best_val_loss": 0.591490626335144,
+      "seconds": 22.33
+    },
+    {
+      "stage": "autoencoder32",
+      "limit": 18,
+      "completed": 18,
+      "best_epoch": 17,
+      "best_val_loss": 0.00186074897646904,
+      "seconds": 81.31
+    },
+    {
+      "stage": "ae32_head",
+      "limit": 54,
+      "completed": 40,
+      "best_epoch": 34,
+      "best_val_loss": 1.246761679649353,
+      "seconds": 3.2
+    },
+    {
+      "stage": "ae32_classifier",
+      "limit": 30,
+      "completed": 20,
+      "best_epoch": 14,
+      "best_val_loss": 1.208403468132019,
+      "seconds": 15.31
+    }
+  ],
+  "pretraining_validation_mse": 0.001582849770784378,
+  "ae_validation_f1_change": 0.02381361156006928
+}
